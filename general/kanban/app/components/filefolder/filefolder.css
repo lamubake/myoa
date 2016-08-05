@@ -1,0 +1,133 @@
+.app-main .app-main-container.filefolder{
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: rgba(0,0,0,.0470588) 0 2px 3px 0;
+    border-radius: 3px;
+}
+.filefolder-banner{
+	padding: 15px 0px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.filefolder-banner .filefolder-route{
+	background: #fff;
+	padding: 0;
+    margin: 0;
+}
+.filefolder-banner .filefolder-add{}
+.filefolder-banner .filefolder-add a{
+	text-decoration: none;
+	margin: 0px 10px;
+}
+.filefolder-banner .filefolder-add span.iconfont {
+    margin-right: 5px;
+}
+.filefolder-list{
+	position: relative;
+}
+.filefolder-batch{
+	position: absolute;
+    top: 18px;
+    left: 50px;
+    right: 0;
+    height: 30px;
+    background: #fff;
+}
+.filefolder-batch a{
+	text-decoration: none;
+}
+.file-delete-icon{
+	font-size: 18px;
+}
+.file-move-icon{
+	font-size: 20px;
+}
+.file-rename-icon{
+	font-size: 18px;
+}
+.filefolder-list table{
+}
+.filefolder-list .filefolder-thead{}
+.filefolder-list .filefolder-tbody{}
+.filefolder-list .filefolder-thead th,
+.filefolder-list .filefolder-tbody td{
+	padding: 20px 10px;
+	vertical-align: bottom;
+}
+.filefolder-thead .file-checkicon{
+	font-weight: normal;
+}
+.filefolder-list .filefolder-itemtxt{
+	position: relative;
+}
+.filefolder-list .filefolder-itemtxt .iconfont{
+	position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -12px;
+}
+.filefolder-list .filefolder-itemtxt input,
+.filefolder-list .filefolder-itemtxt p{
+	margin-left: 40px !important;
+}
+.filefolder-list .filefolder-itemtxt p{
+	margin: 0px 0px 0px 40px;
+	line-height: 18px;
+}
+.filefolder-list .filefolder-addfolder .filefolder-foldericon{
+	color: #999 !important;
+}
+.filefolder-list .filefolder-tbody .filefolder-edit input,
+.filefolder-addfolder input{
+	height: 18px;
+	line-height: 18px;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.filefolder-list .filefolder-tbody .filefolder-foldericon{
+	font-size: 30px;
+	color: #FFDB4D;
+	margin-right: 5px;
+}
+.filefolder-list .filefolder-tbody .filefolder-fileicon{
+	font-size: 28px;
+	color: #3079ed;
+	margin-right: 5px;
+}
+.filefolder .file-checkicon{
+	cursor: pointer;
+	color: #999;
+	vertical-align: bottom;
+}
+.filefolder .file-checkdisable{
+	color: #CBCBCB;
+	font-size: 21px;
+}
+.filefolder-list .filefolder-tbody .savefilebtn,
+.filefolder-list .filefolder-tbody .addfolderbtn{
+	margin-right: 10px;
+}
+.filefolder-add .webuploader-pick{
+	position: relative;
+    background: #fff;
+    color: #0088cc;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0px;
+    display: inline;
+}
+.filefolder-list .filefolder-tbody .filefolder-handle span{
+	color: #999;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.filefolder-list .filefolder-tbody .filefolder-handle span:hover{
+	color: #333;
+}
+.filefolder-modal ul.dynatree-container{
+	width: auto;
+}
+.filefolder-modal .modal-body{
+	min-height: 180px;
+}

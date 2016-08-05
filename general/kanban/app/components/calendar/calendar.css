@@ -1,0 +1,91 @@
+.app-main .app-main-container.calendar {
+	position: relative;
+    padding-top: 20px;
+}
+.calendar .calFilter {
+	overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: -240px;
+    width: 150px;
+    bottom: 10px;
+    padding: 15px 10px;
+    background: #E8E8E8;
+    border-radius: 3px;
+    transition: left 327ms ease;
+}
+.calendar.isfilter .calFilter {
+	left: 15px;
+}
+.calendar .calView{
+	margin-left: 0px;
+	transition: margin-left 327ms ease;
+    border-radius: 3px;
+    box-shadow: rgba(0,0,0,.0470588) 0 2px 3px 0;
+    padding: 15px;
+    background: #fff;
+}
+.calendar.isfilter .calView{
+	margin-left: 185px;
+}
+.calendar .calView .fc-button-folder{
+	font-size: 16px;
+	cursor: pointer;
+	line-height: 22px;
+	margin-right: 10px;
+}
+.calendar .calView .fc-button-addtask{
+	margin-right: 10px;
+}
+.calendar .calView .fc-header{
+	width: 100% !important;
+	margin-left: 0px !important;
+}
+.calendar.isfilter .calView .fc-button-folder{
+}
+ul.project-list{
+	list-style: none;
+    margin: 0px;
+    border: 1px solid #ececec;
+    background: #fff;
+	border-radius: 2px;
+}
+ul.project-list li{
+	border-bottom: 1px solid #ececec;
+}
+ul.project-list li:last-child{
+	border-bottom: none;
+}
+ul.project-list .allicon{
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    font-size: 22px;
+    color: #fdc006;
+}
+ul.project-list li a{
+	display: block;
+    padding: 6px 50px 6px 32px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #383838;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+ul.project-list li a:hover{
+	color: #737373;
+	background: #f7f7f7;
+}
+ul.project-list li i.iconfont{
+	display: none;
+	color: #bbb;
+}
+ul.project-list li.selected i.iconfont{
+	display: inline-block;
+	position: absolute;
+    top: 5px;
+    right: 20px;
+}

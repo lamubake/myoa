@@ -1,0 +1,24 @@
+.attachment{}
+.attachment .attachment-list{
+	position: relative;
+}
+.attachment .attachment-list .attachment-item{
+	float: left;
+	margin: 0px 10px 10px 0px;
+}
+.attachment-add{}
+.attachment-add .webuploader-pick{
+	    padding: 0;
+    background: #fff;
+	/*padding: 3px 5px;*/
+	/*background: #4186f6;*/
+}
+/*.attachment-add .webuploader-pick-hover{
+	background: #5294FF;
+}
+*/
+.attachment-add .webuploader-pick .iconfont{
+	    cursor: pointer;
+    color: #4b8cf7;
+    font-size: 24px;
+}

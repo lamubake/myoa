@@ -1,0 +1,386 @@
+ul{
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.inline{
+    display: inline-block;
+}
+.edittask-dialog{
+    position: fixed;
+    top: 0;
+    right: -600px;
+    z-index: 101;
+    background: #fff;
+    bottom: 0;
+    width: 600px;
+    padding: 10px 20px;
+    border-left: solid 1px #e8edf3;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,.1);
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    -webkit-transform: translateX(700px);
+    -ms-transform: translateX(700px);
+    -o-transform: translateX(700px);
+    transform: translateX(700px);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+.pendtask-dialog .onetask-content{
+    text-align: left !important;
+}
+.edittask-dialog.in {
+    right: 0px;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+.edittask-hd{
+    border-bottom: 1px solid #eee;
+    position: relative;
+    height: 40px;
+}
+.edittask-bd{
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    overflow: auto;
+}
+.edittask-title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: #666;
+}
+.pendtask-dialog .edittask-title .edittask-title-flag{
+    color: #54d09f;
+}
+.edittask-hd-handle{
+    display: inline-block;
+    margin-right: 25px;
+    cursor: pointer;
+}
+.edittask-hd-handle .dropdown-menu{
+    min-width: auto;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+.edittask-hd-handle .dropdown-toggle{
+    border-radius: 3px;
+    padding: 5px 10px;
+    position: relative;
+    padding-left: 27px;
+}
+.edittask-hd-handle:hover .dropdown-toggle,
+.edittask-close:hover{
+    color: #5bc0de !important;
+}
+.edittask-hd-handle .iconfont{
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.edittask-close{
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    font-weight: bold;
+}
+.edittask-hd-handle:hover,.edittask-close:hover{
+    color: #666;
+}
+
+.task-content-container{
+    position: relative;
+    padding: 0 !important;
+    height: 75px;
+}
+.edittask-bd .onetask-content.edit{
+    margin-top: 5px;
+}
+.edittask-bd .onetask-content.unedit{
+    height: 55px;
+    position: absolute;
+    left: 45px;
+    right: 10px;
+    padding: 5px;
+    cursor: pointer;
+    background: #f7f7f7;
+    overflow: hidden;
+}
+.edittask-bd .onetask-content.unedit:hover{
+    background: #eee;
+}
+.onetask-content textarea{
+    resize: none;
+    height: 45px;
+    max-width: 550px;
+}
+.edittask-bd .onetask-content p{
+    margin: 0;
+    cursor: pointer;
+    height: 100%;
+}
+.edittask-bd .onetask-content.finish p{
+    margin: 0;
+    text-decoration: line-through;
+}
+.onetask-executor{
+    position: relative;
+    padding-left: 35px;
+    line-height: 30px;
+    color: #333;
+    display: inline-block;
+    cursor: pointer;
+}
+.onetask-executor img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+/*.onetask-member{
+
+}
+.onetask-member .onetask-memberlist{
+}*/
+.onetask-member .onetask-memberitem{
+    display: inline-block;
+    padding: 0px 5px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.onetask-member .onetask-memberitem img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    max-width: none;
+}
+.onetask-member .onetask-memberitem .member-delete{
+    display: none;
+}
+.onetask-member .onetask-memberitem:hover .member-delete{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    z-index: 1;
+    cursor: pointer;
+    background: #000;
+    opacity: .5;
+    border-radius: 50%;
+    color: #fff;
+}
+.onetask-member .onetask-memberadd{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.onetask-member .onetask-memberadd .iconfont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -11px;
+    color: #18b4ed;
+    font-size: 24px;
+    line-height: 24px;
+}
+.onetask-member .onetask-memberadd:hover .iconfont{
+    color: #3ACAFF;
+}
+.edittask-bd .onetask-status{
+    cursor: pointer;
+    color: #808080;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -15px;
+}
+.edittask-dialog .control-group{
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 0;
+}
+.edittask-dialog .control-group .inline{
+    vertical-align: top;
+    margin-right: 15px;
+    min-width: 80px;
+}
+.edittask-dialog .control-group .onetask-title{
+    margin-bottom: 8px;
+        color: #666;
+}
+.edittask-dialog .onetask-content{
+    /*text-align: center;*/
+}
+.edittask-dialog .control-group .inline input{
+    border-radius: 4px;
+/*    width: 70px;*/
+    height: 30px;
+}
+.edittask-dialog .control-group .inline button{
+    border-radius: 4px;
+    min-width: 80px;
+}
+.edittask-dialog .control-group .inline .btn .caret{
+    margin-left: 5px;
+}
+.edittask-dialog .onetask-content textarea{
+    width: 570px;
+}
+.edittask-dialog .edittask-creator img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/*添加子任务*/
+.edittask-bd .subtask{
+
+}
+.edittask-bd .subtask .subtask-list{
+
+}
+.edittask-bd .subtask .subtask-item{
+    padding: 15px 0px;
+    border-top: 1px dashed #eee;
+    border-radius: 3px;
+    position: relative;
+}
+.edittask-bd .subtask .subtask-item .subtask-icon{
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    color: #999;
+    cursor: pointer;
+}
+.edittask-bd .subtask .subtask-item .subtask-icon:hover{
+    color: #FFD28C;
+}
+.edittask-bd .subtask .subtask-item .subtask-content{
+    margin: 0px 180px 0px 30px;
+}
+.subtask a.subtask-executor{
+    display: inline-block;
+    margin: 0px 10px;
+}
+.subtask .subtask-executor img{
+    width: 22px;
+    height: 22px;
+    margin-top: 0px;
+}
+.subtask-bottom-l{
+    position: absolute;
+    top:12px;
+    right: 15px;
+}
+.subtask-bottom-r{
+    margin-left: 30px;
+}
+.subtask-bottom-l button,.subtask-bottom-l input{
+    padding: 0;
+    text-align: center;
+    /*margin: 0px 10px;*/
+}
+.edittask-bd .subtask-item .subtask-bottom-l button{
+    padding: 0 5px;
+    margin-left: 10px !important;
+    border-radius: 3px;
+}
+.edittask-bd .subtask-item .subtask-bottom-r button{
+    height: 22px;
+    padding: 0px 8px;
+}
+.subtask-delete{
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+}
+.subtask-delete:hover{
+    color: #666;
+}
+
+/*任务动态*/
+.discuss{
+
+}
+.discuss-list{
+
+}
+.discuss-list .discuss-item{
+    position: relative;
+    border-top: 1px dashed #eee;
+    padding: 10px 0px;
+}
+.discuss-list .discuss-avatar{
+}
+.discuss-list .discuss-content{
+    margin-bottom: 0;
+}
+.discuss-list .discuss-time{
+    float: right;
+    color: #999;
+}
+.discuss-form textarea{
+    width: 85%;
+}
+.discuss-form button{
+    vertical-align: bottom;
+    margin-left: 10px;
+}
+
+/*已挂起的*/
+.memberuser{
+    float: left;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    padding: 1px 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+.pendtask-dialog .edittask-bd .subtask .subtask-item{
+    padding: 8px 0px;
+}
+.pendtask-dialog .edittask-bd .subtask .subtask-item p{
+    margin: 0;
+}
+.pendtask-dialog .subtask-bottom-l {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+.pendtask-dialog .subtask-bottom-l span{
+    margin-left: 10px;
+}
+.taskedit-mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    opacity: 0;
+    /*background: white;*/
+}

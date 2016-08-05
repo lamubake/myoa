@@ -1,0 +1,56 @@
+.seluser-container{
+	position: fixed;
+	padding: 15px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 3px;
+	z-index: 1111;
+	box-shadow: 0 7px 21px rgba(0,0,0,.1);
+	width: 180px;
+}
+.seluser-main{}
+.seluser-handle{
+	padding: 0px 0px 10px 0px;
+}
+.seluser-handle a{
+	text-decoration: none;
+	color: #666;
+}
+.seluser-handle a:hover{
+	color: #333;
+}
+.seluser-list{
+    max-height: 180px;
+    overflow-y: auto;
+	border-bottom: 1px solid #eee;
+}
+.seluser-container input.sel-keyword{
+	width: 93%;
+	margin-bottom: 10px;
+}
+.seluser-item a{
+	display: block;
+    border-top: 1px solid #eee;
+    padding: 5px;
+}
+.seluser-item a:hover{
+	background: #f7f7f7;
+}
+.seluser-container .seluser-item .iconfont{
+	display: none;
+}
+.seluser-container .seluser-item.selected .iconfont{
+	display: inline-block;
+    float: right;
+    color: #999;
+}
+.userselect-mask{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	opacity: 0;
+	background: (255,255,255);
+}

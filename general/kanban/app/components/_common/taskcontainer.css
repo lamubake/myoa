@@ -1,0 +1,175 @@
+*{
+	font-family: "Helvetica Neue",helvetica,'lucida grande','lucida sans unicode',lucida,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+}
+
+/*
+我的任务、任务清单公用部分
+*/
+.task-container{
+	overflow: hidden;
+}
+.task-container .task-panels{
+	background: #f7f7f7;
+	white-space: nowrap;
+	overflow-x: auto; 
+	overflow-y: hidden;
+}
+.task-container .task-panels .task-panel{
+	width: 250px;
+    background-color: #ECECEC;
+    position: relative;
+    min-height: 60px;
+    display: inline-block;
+    padding: 15px 10px;
+    margin: 20px;
+    margin-left: 0px;
+    vertical-align: top;
+    color: #999;
+    border-radius: 4px;
+}
+.task-container .task-panels .task-panel.task-panel-timeout{
+	border-top: 3px solid #FFA7A7;
+}
+.task-container .task-panels .task-panel.task-panel-today{
+	border-top: 3px solid #5AE09C;
+}
+.task-container .task-panels .task-panel.task-panel-next{
+	border-top: 3px solid #99CBFF;
+}
+.task-container .task-panels .task-panel.task-panel-done{
+	border-top: 3px solid #9A9A9A;
+}
+.task-container .task-panel  .task-panelinfo{
+    position: relative;
+    padding: 0px 30px 10px 0px;
+}
+.task-container .task-list{
+	min-height: 20px;
+	height: 450px;
+    overflow: auto;
+}
+.task-container .task-list .task-item{
+	background: #fff;
+	padding: 10px;
+	color: #808080;
+	cursor: pointer;
+	border-radius: 2px;
+	margin-bottom: 5px;
+	
+}
+.task-container .task-list .task-item:hover{
+/*	background: #f7f7f7;*/
+}
+.task-container .task-item-level{
+	border-left: 6px solid #f7f7f7;
+}
+.task-container .task-item-level0{
+	border-left: 6px solid #949494;
+}
+.task-container .task-item-level1{
+	border-left: 6px solid #ffa200;
+}
+.task-container .task-item-level2{
+	border-left: 6px solid #ff3c00;
+}
+.task-container .task-item .task-info{
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 10px;
+}
+.task-container .task-item .task-info .task-title{
+	color: #333;
+	white-space: normal;
+	/*max-height: 100px;*/
+    overflow: auto;
+    display: inline-block;
+}
+.task-container .task-item .task-info .task-check,
+.task-container .task-item .task-info .task-pend{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.task-container .task-item .task-info .task-pend{
+	position: absolute;
+    top: -2px;
+    left: 2px;
+    font-size: 19px;
+    color: #aaa;
+}
+.task-container .task-item.task-item-done .task-checked,
+.task-container .task-item .task-info .task-check:hover{
+	color: #FFD28C;
+}
+.task-container .task-item.task-item-done{
+	background: #f9f9f9;
+}
+.task-container .task-item .task-uncheck,
+.task-container .task-item.task-item-done .task-checked{
+	display: inline-block;
+}
+.task-container .task-item .task-checked,
+.task-container .task-item.task-item-done .task-uncheck{
+	display: none;
+}
+.task-container .task-item.task-item-done .task-title{
+	text-decoration: line-through;
+}
+.task-container .task-badges .task-badges-info{
+	background: #e1e1e1;
+    padding: 0px 5px;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-size: 13px;
+    position: relative;
+}
+.task-container .task-badges .task-badges-info .iconfont{
+	font-size: 16px;
+	margin-right: 5px;
+}
+.task-container .task-badges.time_status-0 .task-endtime{
+    color: #fff;
+    background-color: #ff3c00;
+}
+/*.task-container .task-badges-info.task-pend{
+	position: relative;
+    height: 22px;
+    width: 18px;
+}
+.task-container .task-badges-info.task-pend .iconfont{
+	position: absolute;
+    top: 1px;
+    font-size: 18px;
+    color: #ffa200;
+    left: 5px;
+}*/
+.task-container .task-badges .task-endtime{
+}
+.task-container .task-badges .task-endtime .iconfont{
+	font-size: 18px;
+	/*color: #00afd1;*/
+}
+.task-container .task-badges .task-subtasks{
+}
+.task-container .task-badges .task-discuss{
+	width: 18px;
+    position: relative;
+}
+.task-container .task-badges .task-discuss .iconfont{
+	margin: 0;
+/*    color: #4fd696;*/
+    font-size: 17px;
+    line-height: 20px;
+}
+.task-container .task-panel .task-panelname{
+    font-size: 14px;
+    font-weight: bold;
+}
+.task-container .task-panel .task-handle{
+	position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.task-container .task-panel .task-handle .task-count{
+	display: inline-block;
+}

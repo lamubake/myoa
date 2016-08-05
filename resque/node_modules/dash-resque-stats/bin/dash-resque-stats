@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var stats = require('../')
+  , argv = require('minimist')(process.argv.slice(2), {
+    default: {
+      p: 6379,
+      h: '127.0.0.1'
+    }
+  })
+  , redis = require('redis')
+
+var client = redis.createClient(argv.p, argv.h)
+
+if (argv.a) {
+  client.auth(argv.a)
+}
+
+stats(client, argv.n)

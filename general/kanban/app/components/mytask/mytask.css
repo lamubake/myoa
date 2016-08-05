@@ -1,0 +1,10 @@
+.task-container.mytask{
+	background: #f7f7f7;
+}
+.task-container.mytask .btn{
+	border-radius: 4px;
+}
+.mytaskfilter{
+	display: block;
+    margin-top: 20px;
+}
